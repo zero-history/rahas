@@ -1,0 +1,19 @@
+#SET_INT    VAR0    100
+
+#CPY_INT    VAR6    VAR0
+
+#IF_EQ_INT  VAR6   VAR0
+    #ADD_INT    VAR6 VAR6 VAR0
+    #ADD_INT    VAR6 VAR6 VAR0
+    #IF_EQ_INT  VAR6   VAR0
+        #ADD_INT    VAR6 VAR6 VAR0
+        #ADD_INT    VAR6 VAR6 VAR0
+    #ELSE
+#END_IF
+#ELSE
+#END_IF
+#ELSE
+
+
+
+

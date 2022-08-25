@@ -1,0 +1,53 @@
+#SET_INT    VAR0    100
+#SET_INT    VAR1    10000000
+#SET_INT    VAR2    10000100
+#SET_CINT   VAR3    ETR0
+#SET_CINT_FROM_INT  VAR4    VAR1
+#SET_PK     VAR5    ETR1
+#SET_INT    VAR7    100
+
+#CPY_INT    VAR6    VAR0
+
+#IF_NEQ_INT  VAR6   VAR0
+    #ADD_INT    VAR6 VAR6 VAR0
+    #ADD_INT    VAR6 VAR6 VAR0
+    #IF_EQ_INT VAR0 VAR7
+         #RETURN_ERROR
+    #END_IF
+    #RETURN_ERROR
+#ELSE
+    #SUB_INT    VAR6 VAR6 VAR0
+    #SUB_INT    VAR6 VAR6 VAR0
+    #IF_EQ_INT  VAR0    VAR7
+            #ADD_INT    VAR6 VAR6 VAR0
+            #ADD_INT    VAR6 VAR6 VAR0
+    #ELSE
+            #SUB_INT    VAR6 VAR6 VAR0
+            #SUB_INT    VAR6 VAR6 VAR0
+            #IF_EQ_INT VAR0 VAR7
+                     #RETURN_ERROR
+            #END_IF
+            #RETURN_ERROR
+    #END_IF
+#END_IF
+
+#IF_EQ_INT  VAR0    VAR7
+        #ADD_INT    VAR6 VAR6 VAR0
+        #ADD_INT    VAR6 VAR6 VAR0
+        #IF_NEQ_INT VAR0 VAR7
+                #RETURN_ERROR
+        #ELSE
+
+        #END_IF
+#ELSE
+        #SUB_INT    VAR6 VAR6 VAR0
+        #SUB_INT    VAR6 VAR6 VAR0
+        #IF_EQ_INT VAR0 VAR7
+                 #RETURN_ERROR
+        #END_IF
+        #RETURN_ERROR
+#END_IF
+
+
+#RETURN_OK
+
