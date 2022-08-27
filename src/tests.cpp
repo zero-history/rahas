@@ -16,7 +16,7 @@ int main() {
 
     start = clock();
 
-    /*test_reduce64();
+    test_reduce64();
     test_get_masks();
     test_check_norm();
     test_ntt();
@@ -40,11 +40,11 @@ int main() {
     test_div_d2();
 #endif
 
-    //test_max_min();*/
+    //test_max_min();
 
-    /*test_escrow();
+    test_escrow();
     test_escrow2();
-    test_lang_basic();*/
+    test_lang_basic();
     test_for_basic();
 
     end = clock();
